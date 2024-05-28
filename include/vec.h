@@ -10,6 +10,7 @@ template <int N, class T> class vec{
         ~vec();
         vec<N,T>& operator = (const vec<N,T> &);
         vec<N,T>& operator = (vec<N,T> &&);
+        vec<N,T> operator + (const vec<N,T> &);
     private:
         
 };

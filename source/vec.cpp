@@ -46,3 +46,12 @@ vec<N,T>& vec<N,T>::operator = (vec<N,T> && b){
     b.payload = nullptr;
     return *this;
 }
+
+template<int N,class T>
+vec<N,T> vec<N,T>::operator + (const vec<N,T> &b){
+    vec<N,T> result;
+    for(int i=0;i<N;i++){
+        result.payload[i] = this->payload[i] + b.payload[i];
+    }
+    return result;
+}

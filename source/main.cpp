@@ -12,6 +12,8 @@ int main(){
     a.payload[0] = 1.0;
     a.payload[1] = 2.0;
     vec2 b;
-    const vec2 &c = a;
-    b = c;
+    b.payload[0] = 1.0;
+    b.payload[1] = 2.0;
+    b = a + a + b;
+    printf("%lf,%lf\n",b.payload[0],b.payload[1]);
 }
